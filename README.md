@@ -4,7 +4,7 @@ Repo for code used in the AI probability calculations in Crawford, Cushen, Hacka
 
 Used labeled dataset https://huggingface.co/datasets/artem9k/ai-text-detection-pile.
 
-Code generated with the aid of ChatGPT Instant 5.3. Reviewed and manually verified by Rife (4/4/2026). All errors are his responsibility.
+Code generated with the aid of ChatGPT Instant 5.3. Reviewed and manually verified by Rife (4/4/2026). Any errors are his responsibility.
 
 AI model report output:
 
@@ -20,3 +20,5 @@ weighted avg       0.93      0.93      0.93    276111
 
 ROC AUC: 0.9788657450791052
 ```
+
+TODO: Spot-check cases for accuracy and improve text cleaning (still seeing some non-utf8 characters being passed to the classifier).
