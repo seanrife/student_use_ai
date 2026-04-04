@@ -1,6 +1,10 @@
 # student_use_ai
 
-Repo for code used in the AI probability calculations in Crawford, Cushen, Hackathorn, Rife and St. Peters [actual order TBD]
+Repo for code used in the AI probability calculations in Crawford, Cushen, Hackathorn, Rife and St. Peters [actual order TBD].
+
+Used labeled dataset https://huggingface.co/datasets/artem9k/ai-text-detection-pile.
+
+Code generated with the aid of ChatGPT Instant 5.3. Reviewed and manually verified by Rife (4/4/2026).
 
 AI model report output:
 
