@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "ai-study"
+version = "0.1.0"
+description = ""
+authors = ["Sean C. Rife <seanrife@gmail.com>"]
+readme = "README.md"
+packages = [{include = "ai_study"}]
+
+[tool.poetry.dependencies]
+python = "^3.14"
+datasets = "^4.8.4"
+scikit-learn = "^1.8.0"
+openpyxl = "^3.1.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
