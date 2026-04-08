@@ -9,13 +9,12 @@ from sklearn.calibration import CalibratedClassifierCV
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import classification_report, roc_auc_score
 
-# Load dataset
-# Replace with the exact split/field names in your copy of the dataset
+# Load dataset from https://huggingface.co/datasets/artem9k/ai-text-detection-pile
 ds = load_dataset("artem9k/ai-text-detection-pile", split="train")
-
-# Convert to DataFrame and keep the needed columns
+# Convert to DataFrame
 df = pd.DataFrame(ds)
 
+# Some basic text hygiene
 df = df[["text", "source"]].dropna()
 df["text"] = df["text"].astype(str).str.strip()
 df = df[df["text"].str.len() > 100]
@@ -51,13 +50,10 @@ model = CalibratedClassifierCV(
     cv=5
 )
 
-# Fit
+# Evaluate model fit
 model.fit(X_train, y_train)
-
-# Evaluate
 pred = model.predict(X_test)
 proba = model.predict_proba(X_test)[:, 1]
-
 print(classification_report(y_test, pred))
 print("ROC AUC:", roc_auc_score(y_test, proba))
 
