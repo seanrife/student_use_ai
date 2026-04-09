@@ -7,10 +7,11 @@ readme = "README.md"
 packages = [{include = "ai_study"}]
 
 [tool.poetry.dependencies]
-python = "^3.14"
+python = ">=3.10,<3.15"
 datasets = "^4.8.4"
-scikit-learn = "^1.8.0"
 openpyxl = "^3.1.5"
+triton = "^3.6.0"
+binoculars = {git = "https://github.com/ahans30/Binoculars.git"}
 
 
 [build-system]
